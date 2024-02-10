@@ -1,0 +1,14 @@
+FUNCTION palindrome(word:STRING) : STRING
+VAR
+    ///
+BEGIN
+    IF (word.length <= 1) THEN
+         RETURN "it is a palindrome"
+    END_IF
+    IF (word[0] = word[word.length-1]) THEN
+        RETURN palindrome(word.slice(1, -1))
+    ELSE
+        RETURN "It is not a palindrome"
+    END_IF
+END
+
